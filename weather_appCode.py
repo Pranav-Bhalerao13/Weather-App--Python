@@ -4,13 +4,13 @@ from tkinter import messagebox
 from PIL import Image, ImageTk  # For handling images
 
 def get_weather():
-    """Fetch weather details from OpenWeatherMap API and update the UI."""
+    """ Fetch weather details from OpenWeatherMap API and update the UI."""
     city = city_entry.get()
     if not city:
         messagebox.showerror("Error", "Please enter a city name")
         return
 
-    api_key = "f0a2ae0bbf344b8c7599d63d1fab3e8d"  # Replace with your API key
+    api_key = ""  # Replace with your API key
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
 
     try:
@@ -103,3 +103,4 @@ result_label.place(relx=0.5, rely=0.3, anchor="n", width=400, height=150)
 
 # Start the main event loop
 root.mainloop()
+
